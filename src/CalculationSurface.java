@@ -13,28 +13,19 @@ public class CalculationSurface {
             System.out.println("(x=1: circle), (x=2: rectangle),(x=3: square)" +
                     "give me x=");
             x = input.nextInt();
-            if (x != 1 && x != 2 && x != 3)
-                System.out.println("try again");
-            else {
-                if (x == 1)
-
-
-                {
+            switch (x) {
+                case 1:
                     System.out.println("circle of radius positive R=");
                     R = input.nextFloat();
 
                     if (R < 0) {
                         System.out.println("try again R=");
-                    } else {
+                    } else
                         System.out.println("Air of circle:" + 3.14 * R * R);
 
-                        System.out.println("perimeters circle:" + 3.14 * R);
-                    }
-
-
-                } else if (x == 2) {
-
-
+                    System.out.println("perimeters circle:" + 3.14 * R);
+                    break;
+                case 2:
                     System.out.println("length positive l=");
                     l = input.nextInt();
                     if (l < 0) {
@@ -58,33 +49,29 @@ public class CalculationSurface {
 
 
                     }
+                    break;
+                case 3:
+                    System.out.println("length positive p=");
+                    p = input.nextFloat();
+                    if (p < 0) {
+                        System.out.println("try again");
 
 
-                } else {
-                    if (x == 3) {
-
-                        System.out.println("length positive p=");
-                        p = input.nextFloat();
-                        if (p < 0) {
-                            System.out.println("try again");
-
-
-                        } else {
-                            System.out.println("air of square:" + p * p);
-                            System.out.println("perimaitre of square:" + 4 * p);
-                        }
-
-
-                    }
-
-
-                }
+                    } else {
+                        System.out.println("air of square:" + p * p);
+                        System.out.println("perimaitre of square:" + 4 * p);
+                    }break;
+                default:
+                    System.out.println("try again");
 
             }
 
-
         }
 
-
     }
+
+
 }
+
+
+
